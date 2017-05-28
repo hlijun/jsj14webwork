@@ -8,7 +8,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import cn.zk.jsj14.wsgwpt.domain.User;
 import cn.zk.jsj14.wsgwpt.service.LoginService;
@@ -47,15 +46,10 @@ private static final long serialVersionUID = 1L;
 			checkResult = ls.checkUserNameAndPassword(user);
 			
 			if(checkResult == true){
-				 msg = userName;
-				// request.setAttribute("MSG", msg);
-				//使用request对象的getSession()获取session，如果session不存在则创建一个
-				HttpSession session = request.getSession();
-				//将数据存储到session中
-		        session.setAttribute("data", msg);
+				msg = "恭喜你，欢迎"+userName+"光临!";
 				rd = request.getRequestDispatcher("/index.jsp");
 			}else{
-					
+				msg = "用户名或者密码不正确";	
 				rd = request.getRequestDispatcher("/login.jsp");
 			}
 		}catch(Exception e){
@@ -63,7 +57,7 @@ private static final long serialVersionUID = 1L;
 			
 		}finally{
 			
-			//request.setAttribute("MSG", );
+			request.setAttribute("MSG", msg);
 			rd.forward(request, response);
 			
 		}
@@ -72,7 +66,7 @@ private static final long serialVersionUID = 1L;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
+		this.doGet(request, response);
 	}
 
 }
