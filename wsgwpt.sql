@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50635
 File Encoding         : 65001
 
-Date: 2017-05-27 14:41:48
+Date: 2017-05-28 13:16:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -78,6 +78,8 @@ CREATE TABLE `purchase_order` (
 -- ----------------------------
 INSERT INTO `purchase_order` VALUES ('1711111111111', '1', '2', '零食', '黄丽君', '12345678901', '广东省广州市海珠区仲恺路500号', '30.80', '零食品大礼包咪咪虾条蟹味粒薯片薯条整箱批发好吃的膨化小吃店');
 INSERT INTO `purchase_order` VALUES ('2017525123552 ', '1  ', '3', '零食', 'cvtybunim', '19856743281', '宇宙银河系地球亚洲中国广东省广州市', '44.99', '零食品大礼包咪咪虾条蟹味粒薯片薯条整箱批发好吃的膨化小吃店');
+INSERT INTO `purchase_order` VALUES ('2017527164133 ', '5', '3', '零食', '林奕钦', '18816798380', '樱花宇宙世界无敌地址', '41.70', '秦之恋老襄阳大米手工锅巴400g麻辣味特产好吃的吃货零食小吃批发');
+INSERT INTO `purchase_order` VALUES ('2017527165522 ', '7', '3', '水果', '火火火', '0987654321', '广东省广州市海珠区纺织路东沙街', '444.00', '烟台大樱桃车厘子新鲜水果山东美早樱桃2斤现货现摘现发顺丰包邮');
 
 -- ----------------------------
 -- Table structure for `shop`
@@ -118,7 +120,10 @@ CREATE TABLE `shopping_cart` (
 -- ----------------------------
 -- Records of shopping_cart
 -- ----------------------------
-INSERT INTO `shopping_cart` VALUES ('9', '短袖t恤女2017夏季新款韩版宽松学生小清新夏装衣服女上衣体恤衫', '23456', '衣服', '49.90', '1');
+INSERT INTO `shopping_cart` VALUES ('1', '零食品大礼包咪咪虾条蟹味粒薯片薯条整箱批发好吃的膨化小吃店', '111225', '零食', '15.49', '1');
+INSERT INTO `shopping_cart` VALUES ('5', '秦之恋老襄阳大米手工锅巴400g麻辣味特产好吃的吃货零食小吃批发', '234', '零食', '13.90', '1');
+INSERT INTO `shopping_cart` VALUES ('8', '夏季新款纯白色V领显瘦短袖t恤女时尚纯棉半袖打底衫女款上衣服潮', '23456', '衣服', '35.00', '1');
+INSERT INTO `shopping_cart` VALUES ('9', '短袖t恤女2017夏季新款韩版宽松学生小清新夏装衣服女上衣体恤衫', '23456', '衣服', '49.90', '2');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -137,8 +142,10 @@ CREATE TABLE `user` (
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('adfghjkt', '123456', 'asdfgh', '123456', 'asdfg');
+INSERT INTO `user` VALUES ('bb', '1234567', null, null, null);
 INSERT INTO `user` VALUES ('fghjk', '123456789', null, null, null);
 INSERT INTO `user` VALUES ('明明', '123456', '13675657987', '黄某', '广东省广州市海珠区滨江东路765号');
 INSERT INTO `user` VALUES ('更好', '0987654321', '56789012345', '李白', '广东省湛江市湛江市区');
+INSERT INTO `user` VALUES ('林奕钦', '1234567', '123456789098765', '林奕钦', '宇宙银河系m78星云');
 INSERT INTO `user` VALUES ('混合', '0987654321', null, null, null);
 INSERT INTO `user` VALUES ('黄丽君', '123456', '13678950765', '黄丽君', '广东省广州市海珠区仲恺路500号仲恺学生公寓');
