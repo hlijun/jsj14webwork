@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%> 
+<%@ page import="java.text.*"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -83,13 +85,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<label for="user-old-password" class="am-form-label">订单号</label>
 							<div class="am-form-content">
 							<% 
-							String date = (new java.util.Date()).toLocaleString(); 
+							Date date1=new Date();
+                            SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");//设置格式
+                            String date = formater.format(date1);//转化为字符串
+							//String date = (new java.util.Date()).toLocaleString(); 
 							String year=date.substring(0,4);//取第0+1位至第4位
-                            String month=date.substring(5,6);//取第5+1位至第7位
-                            String day=date.substring(7,9);//取第8+1位至第10位
-                            String hour=date.substring(10,12);
-                            String min=date.substring(13,15);
-                            String miu=date.substring(16,18);
+                            String month=date.substring(5,7);//取第5+1位至第7位
+                            String day=date.substring(8,10);//取第8+1位至第10位
+                            String hour=date.substring(11,13);
+                            String min=date.substring(14,16);
+                            String miu=date.substring(17,19);
 							 %>  
 								<input type="text" id="order_id" name="order_id" readonly="true" value="<%=year+month+day+hour+min+miu%> ">
 							</div>

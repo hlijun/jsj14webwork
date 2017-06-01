@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<a href="index.jsp" target="_top" class="h">商城首页|| </a>
 							<a href="grzx.jsp" target="_top">个人中心|| </a>
 							<a href="gwc.jsp" target="_top" class="h">购物车|| </a>
-							<a href=".jsp" target="_top">收藏夹</a>
+							<a href="" target="_top">收藏夹</a>
 				</div>
 			</ul>
 			</div>
